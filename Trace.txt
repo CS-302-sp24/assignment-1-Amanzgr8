@@ -1,0 +1,520 @@
+A) Below is the output for np = 5, nc = 1, tt = 1, et = 1, rl = 0. This set of parametes causes a deadlock where all the threads 
+   have the right chopstick, but can never get the left chopstic
+
+Philosopher 4 thinks for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 0 thinks for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 0 wants right chopstic
+Philosopher 4 wants right chopstic
+Philosopher 1 wants right chopstic
+Philosopher 2 wants right chopstic
+Philosopher 4 has right chopstic
+Philosopher 2 has right chopstic
+Philosopher 1 has right chopstic
+Philosopher 3 has right chopstic
+Philosopher 3 wants left chopstic    // line 18, 19, 20, 22, & 23 show the philosophers(threds) reaching towards the left chopstick(memeory)
+Philosopher 4 wants left chopstic        but not being able to get it because it's under use. This is due to a deadlock 
+Philosopher 1 wants left chopstic
+Philosopher 0 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 2 wants left chopstic
+
+
+B) Below is the output for np = 5, nc = 1, tt = 1, et = 1, rl = 1. By setting the value of rl to 1, we can avoid a deadlock like the one above.
+
+Philosopher 0 thinks for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 0 wants right chopstic
+Philosopher 2 wants right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 3 wants left chopstic
+Philosopher 4 wants right chopstic
+Philosopher 0 has right chopstic
+Philosopher 4 has right chopstic
+Philosopher 2 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 4 wants left chopstic
+Philosopher 2 wants left chopstic
+Philosopher 4 has left chopstic
+Philosopher 2 has left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 0 has left chopstic
+Philosopher 0 eats for 0 units
+Philosopher 2 eats for 0 units
+Philosopher 3 has left chopstic
+Philosopher 3 wants right chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 wants right chopstic
+Philosopher 3 has right chopstic
+Philosopher 1 has right chopstic
+Philosopher 3 eats for 0 units
+Philosopher 1 eats for 0 units
+
+
+c) Below is the output for np = 5, nc = 0, tt = 1, et = 1, rl = 0. This shows the classical "five philosophers eating forever"
+   showing a chance of a deadlock.
+
+Philosopher 1 thinks for 0 units
+Philosopher 0 thinks for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 4 wants right chopstic
+Philosopher 3 wants right chopstic
+Philosopher 2 wants right chopstic
+Philosopher 3 has right chopstic
+Philosopher 1 wants right chopstic
+Philosopher 4 has right chopstic
+Philosopher 4 wants left chopstic
+Philosopher 3 wants left chopstic
+Philosopher 1 has right chopstic
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 2 wants right chopstic
+Philosopher 3 has left chopstic
+Philosopher 3 eats for 0 units
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 3 thinks for 0 units
+Philosopher 1 eats for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 1 thinks for 0 units
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 2 thinks for 0 units
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 2 wants right chopstic
+Philosopher 2 has right chopstic
+Philosopher 1 thinks for 0 units
+Philosopher 4 has left chopstic
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 3 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 2 has left chopstic
+Philosopher 3 wants left chopstic
+Philosopher 4 wants right chopstic
+Philosopher 4 has right chopstic
+Philosopher 2 eats for 0 units
+Philosopher 4 wants left chopstic
+Philosopher 1 wants right chopstic
+Philosopher 3 has left chopstic
+Philosopher 2 thinks for 0 units
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 2 wants right chopstic
+Philosopher 3 eats for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 4 has left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 2 has right chopstic
+Philosopher 4 thinks for 0 units
+Philosopher 2 wants left chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 4 wants right chopstic
+Philosopher 3 has right chopstic
+Philosopher 2 wants right chopstic
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 4 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 3 has left chopstic
+Philosopher 3 eats for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 4 wants left chopstic
+Philosopher 0 wants right chopstic
+Philosopher 1 eats for 0 units
+Philosopher 0 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 3 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 3 has left chopstic
+Philosopher 2 wants right chopstic
+Philosopher 3 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 4 has left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 0 has left chopstic
+Philosopher 3 thinks for 0 units
+Philosopher 0 eats for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 0 thinks for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 0 wants right chopstic
+Philosopher 0 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 0 has left chopstic
+Philosopher 0 eats for 0 units
+Philosopher 0 thinks for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 4 wants right chopstic
+Philosopher 2 thinks for 0 units
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 0 wants right chopstic
+Philosopher 3 has right chopstic
+Philosopher 2 wants right chopstic
+Philosopher 4 has right chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 2 has left chopstic
+Philosopher 1 wants right chopstic
+Philosopher 2 eats for 0 units
+Philosopher 0 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 4 wants left chopstic
+Philosopher 2 thinks for 0 units
+Philosopher 2 wants right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 1 has right chopstic
+Philosopher 3 has left chopstic
+Philosopher 1 wants left chopstic
+Philosopher 3 eats for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 4 has left chopstic
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 3 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 0 has left chopstic
+Philosopher 4 thinks for 0 units
+Philosopher 0 eats for 0 units
+Philosopher 4 wants right chopstic
+Philosopher 4 has right chopstic
+Philosopher 4 wants left chopstic
+Philosopher 0 thinks for 0 units
+Philosopher 1 has left chopstic
+Philosopher 0 wants right chopstic
+Philosopher 1 eats for 0 units
+Philosopher 0 has right chopstic
+Philosopher 2 has left chopstic
+Philosopher 1 thinks for 0 units
+Philosopher 2 eats for 0 units
+Philosopher 0 wants left chopstic
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 2 thinks for 0 units
+Philosopher 3 has left chopstic
+Philosopher 2 wants right chopstic
+Philosopher 3 eats for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 4 has left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 3 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 4 thinks for 0 units
+Philosopher 0 has left chopstic
+Philosopher 4 wants right chopstic
+Philosopher 0 eats for 0 units
+Philosopher 4 has right chopstic
+Philosopher 4 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 0 thinks for 0 units
+Philosopher 1 eats for 0 units
+Philosopher 0 wants right chopstic
+Philosopher 2 has left chopstic
+Philosopher 1 thinks for 0 units
+Philosopher 0 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 1 wants right chopstic
+Philosopher 2 eats for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 3 has left chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 3 eats for 0 units
+Philosopher 2 wants right chopstic
+Philosopher 4 has left chopstic
+Philosopher 3 thinks for 0 units
+Philosopher 4 eats for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 4 thinks for 0 units
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 0 has left chopstic
+Philosopher 0 eats for 0 units
+Philosopher 4 wants right chopstic
+Philosopher 4 has right chopstic
+Philosopher 4 wants left chopstic
+Philosopher 3 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 2 has left chopstic
+Philosopher 0 thinks for 0 units
+Philosopher 0 wants right chopstic
+Philosopher 0 has right chopstic
+Philosopher 2 eats for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 3 has left chopstic
+Philosopher 3 eats for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 1 has right chopstic
+Philosopher 2 wants right chopstic
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 4 has left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 1 wants left chopstic
+Philosopher 4 wants right chopstic
+Philosopher 0 has left chopstic
+Philosopher 0 eats for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 3 has right chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 4 has right chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 0 thinks for 0 units
+Philosopher 3 wants left chopstic
+Philosopher 2 thinks for 0 units
+Philosopher 4 wants left chopstic
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 0 wants right chopstic
+Philosopher 1 eats for 0 units
+Philosopher 0 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 1 thinks for 0 units
+Philosopher 2 wants right chopstic
+Philosopher 1 wants right chopstic
+Philosopher 3 has left chopstic
+Philosopher 1 has right chopstic
+Philosopher 3 eats for 0 units
+Philosopher 1 wants left chopstic
+Philosopher 3 thinks for 0 units
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 4 has left chopstic
+Philosopher 3 wants right chopstic
+Philosopher 4 eats for 0 units
+Philosopher 3 has right chopstic
+Philosopher 0 has left chopstic
+Philosopher 4 thinks for 0 units
+Philosopher 3 wants left chopstic
+Philosopher 4 wants right chopstic
+Philosopher 0 eats for 0 units
+Philosopher 0 thinks for 0 units
+Philosopher 0 wants right chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 0 has right chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 3 has left chopstic
+Philosopher 0 wants left chopstic
+Philosopher 1 wants right chopstic
+Philosopher 4 has right chopstic
+Philosopher 4 wants left chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 2 wants right chopstic
+Philosopher 3 eats for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 4 has left chopstic
+Philosopher 3 wants right chopstic
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 0 has left chopstic
+Philosopher 3 has right chopstic
+Philosopher 0 eats for 0 units
+Philosopher 3 wants left chopstic
+Philosopher 4 wants right chopstic
+Philosopher 0 thinks for 0 units
+Philosopher 0 wants right chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 0 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 4 has right chopstic
+Philosopher 4 wants left chopstic
+Philosopher 3 has left chopstic
+Philosopher 3 eats for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 2 wants right chopstic
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 3 thinks for 0 units
+Philosopher 4 has left chopstic
+Philosopher 1 wants left chopstic
+Philosopher 3 wants right chopstic
+Philosopher 4 eats for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 4 wants right chopstic
+Philosopher 0 has left chopstic
+Philosopher 3 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 0 eats for 0 units
+Philosopher 4 has right chopstic
+Philosopher 4 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 0 thinks for 0 units
+Philosopher 1 eats for 0 units
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 0 wants right chopstic
+Philosopher 1 thinks for 0 units
+Philosopher 3 has left chopstic
+Philosopher 3 eats for 0 units
+Philosopher 0 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 4 has left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 0 has left chopstic
+Philosopher 0 eats for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 1 has left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 3 thinks for 0 units
+Philosopher 1 has left chopstic
+Philosopher 3 wants right chopstic
+Philosopher 3 has right chopstic
+Philosopher 0 thinks for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 0 wants right chopstic
+Philosopher 2 wants right chopstic
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
+Philosopher 4 wants right chopstic
+Philosopher 4 has right chopstic
+Philosopher 4 wants left chopstic
+Philosopher 3 wants left chopstic
+Philosopher 1 eats for 0 units
+Philosopher 1 thinks for 0 units
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 0 has right chopstic
+Philosopher 0 wants left chopstic
+Philosopher 3 has left chopstic
+Philosopher 3 eats for 0 units
+Philosopher 2 thinks for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 4 has left chopstic
+Philosopher 4 eats for 0 units
+Philosopher 4 thinks for 0 units
+Philosopher 2 wants right chopstic
+Philosopher 2 has right chopstic
+Philosopher 3 thinks for 0 units
+Philosopher 4 wants right chopstic
+Philosopher 0 has left chopstic
+Philosopher 2 wants left chopstic
+Philosopher 3 wants right chopstic
+Philosopher 3 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 0 eats for 0 units
+Philosopher 0 thinks for 0 units
+Philosopher 1 has left chopstic
+Philosopher 4 has right chopstic
+Philosopher 0 wants right chopstic
+Philosopher 1 eats for 0 units
+Philosopher 0 has right chopstic
+Philosopher 1 thinks for 0 units
+Philosopher 1 wants right chopstic
+Philosopher 2 has left chopstic
+Philosopher 2 eats for 0 units
+Philosopher 1 has right chopstic
+Philosopher 1 wants left chopstic
+Philosopher 2 thinks for 0 units
+Philosopher 0 wants left chopstic
+Philosopher 3 has left chopstic
+Philosopher 2 wants right chopstic
+Philosopher 3 eats for 0 units
+Philosopher 3 thinks for 0 units
+Philosopher 3 wants right chopstic
+Philosopher 3 has right chopstic
+Philosopher 3 wants left chopstic
+Philosopher 4 wants left chopstic
+Philosopher 2 has right chopstic
+Philosopher 2 wants left chopstic
